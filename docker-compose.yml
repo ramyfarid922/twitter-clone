@@ -1,0 +1,21 @@
+version: '2.2'
+
+services:
+    pgadmin:
+        container_name: mypgadmin
+        image: dpage/pgadmin4
+        ports:
+            - "8010:80"
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=ramyfarid922@gmail.com
+            - PGADMIN_DEFAULT_PASSWORD=password
+        
+    postgres1:
+        container_name: mypostgres1
+        image: postgres
+        ports:
+            - "5431:5432"
+        environment:
+            - POSTGRES_USERNAME=postgres
+            - POSTGRES_PASSWORD=postgres
+
